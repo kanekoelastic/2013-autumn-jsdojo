@@ -1,0 +1,83 @@
+html {
+	font-family: sans-serif;
+	font-size: 100%;
+}
+
+head {
+	display: none;
+}
+
+.hero {
+	text-align: center;
+	margin: 6em auto 3em;
+}
+
+.hero-titles {
+	padding: 0 2em;
+}
+
+div {
+	display: block;
+}
+
+body {
+	font-family:"proxima-nova";
+	color: #777;
+}
+
+html {
+	font-size:100%;
+}
+
+h2 {
+	display: block;
+	-webkit-margin-before: 0.83em;
+	-webkit-margin-after: 0.83em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+label {
+	cursor: default;
+}
+
+.pure-button {
+	font-family: inherit;
+}
+
+.hero h2 {
+	font-weight: 100;
+	font-size: 260%;
+	margin: 0.02em 0 0.8em;
+	color: #666;
+}
+
+.hero h1 {
+	font-size: 800%;
+	margin: 0;
+	padding: 0;
+	color: #1f8dd6;
+	font-weight: 100;
+}
+.button-fizz,
+.button-buzz,
+.button-fizzbuzz,
+.button-etc{
+	color: white;
+	border-radius: 4px;
+	width: 120px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.button-fizz{
+	background: rgb(28, 184, 65);
+}
+.button-buzz{
+	background: rgb(202, 60, 60);
+}
+.button-fizzbuzz{
+	background: rgb(223, 117, 20);
+}
+.start-button {
+	margin-top : 10px;
+	background: rgb(192,192,192);
+}

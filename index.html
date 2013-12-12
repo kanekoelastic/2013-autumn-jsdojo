@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<style scoped>
+		</style>
+		<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+		<script src="FizzBuzz.js"></script>
+		<script src="Score.js"></script>
+		<script src="Game.js"></script>
+		<script>
+			$(document).ready( function() {
+				game =  new Game();
+				$(".start-button").click(function(){
+					var level = $('select[name=level]').val();
+					game.init(level);
+					game.setQuestion();
+				});
+				$(".result-button").click(function(){
+					game.answer($(this).html(), number);
+				});
+			});
+			jQuery.fn.extend({
+				timer: function(){
+					var _self=$(this);
+					var i = 100;
+					_self.css({"background-color":"blue", "width": i+"%"});
+					cssChWidth=function(){
+						i--;
+						_self.css("width",i+"%");
+					}
+					setInterval("cssChWidth()",100);
+					clearInterval("cssChWidth()");
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div class="hero">
+			<div id="graph">&nbsp;</div>
+			<div class="hero-titles">
+				<h2>Fizz Buzz Quiz</h2>
+				<label for="level-option">難易度</label>
+				<select id="level-option" name="level">
+					<option value="1">初級</option>
+					<option value="2">中級</option>
+					<option value="3">上級</option>
+					<option value="4">鬼</option>
+				</select>
+				<button class="pure-button start-button">スタート</button>
+			</div>
+			<h1 id="number">&nbsp;</h1>
+			<button class="pure-button button-fizz result-button">Fizz</button>
+			<button class="pure-button button-buzz result-button">Buzz</button>
+			<button class="pure-button button-fizzbuzz result-button">FizzBuzz</button>
+			<button class="pure-button pure-etc result-button">ETC</button>
+			<div id="result">
+				<span>回答数:<span id="answer_num"></span></span>
+				<span>正解数:<span id="success_num"></span></span>
+				<span>不正回数:<span id="failed_num"></span></span>
+				<span>連続正解数<span id="max_success_continue_num"></span></span>
+			</div>
+		</div>
+	</body>
+</html>
+
